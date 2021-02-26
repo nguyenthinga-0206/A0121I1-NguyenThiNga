@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH hien thi dau </title>
+</head>
+<body>
+    <!--    Bài tập 1: Hiển thị kết quả sử dụng hàm alert() -->
+    <button type="button" onclick="showMessage1();">Click Me1!</button>
+    <script>
+        function showMessage1(){
+            alert('Xin chào!');
+        }
+    </script>
+
+    <!-- Bài tập 2: Hiển thị kết quả sử dụng thẻ HTML -->
+
+    <button type="button" onclick="showMessage2();">Click Me2!</button>
+    <div id="messageDiv"></div>
+    <script>
+        function showMessage2(){
+            document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+        }
+    </script>
+
+    <!-- Bài tập 3: Hiển thị kết quả sử dụng hàm document.write() -->
+
+    <button type="button" onclick="showMessage3();">Click Me3!</button>
+    <script>
+        function showMessage3(){
+            document.write('Xin chào!');
+        }
+    </script>
+
+    <!--  Bài tập 4: Hiển thị kết quả sử dụng hàm console.log()  -->
+
+    <button type="button" onclick="showMessage4();">Click Me4!</button>
+    <script>
+        function showMessage4(){
+            console.log('Xin chào!');
+        }
+    </script>
+
+</body>
+</html>
