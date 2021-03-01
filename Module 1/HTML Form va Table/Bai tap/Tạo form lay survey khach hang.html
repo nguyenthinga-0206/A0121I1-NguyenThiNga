@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form lấy survey khách hàng</title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" action="" class="wufoo">
+        <h1>Market Research Survey</h1>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+        <br>
+
+        <b>what is your age range?</b><br>
+        <select>
+            <option value = "  ">18-24</option>
+            <option value = "  ">15-34</option>
+            <option value = "  ">35-50</option>
+            <option value = "  ">50+</option>
+        </select><br>
+
+        <b>what is your yearly income range?</b><br>
+        <select>
+            <option value = "">$0-$25,000</option>
+            <option value = "">$25,000-$50,000</option>
+            <option value = "">$50,000-$100,000</option>
+            <option value = "">$100,000+</option>
+        </select><br>
+
+        <b>Gender</b><br>
+        <input type="Radio" name="/rd" />Male<br>
+        <input type="Radio" name="/rd" />Female<br>
+
+        <b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b><br>
+        <input type="checkbox" name="/rd"/>Product 1<br>
+        <input type="checkbox" name="/rd"/>Product 2<br>
+        <input type="checkbox" name="/rd"/>Product 3<br>
+
+        <b>How often would you use our new product?</b><br>
+        <input type="Radio" name="/rd" />Daily<br>
+        <input type="Radio" name="/rd" />Weekly<br>
+        <input type="Radio" name="/rd" />Monthly<br>
+
+        <b>What would you pay for the new product?</b><br>
+        <p>$ <input type="text" name=""/> . <input type="text" name=""/></p><br>
+
+        <b>What features would you like to see in the new porduct.</b><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao form don giam</title>
+    <style>
+        body {
+            padding: 100px;
+        }
+        table {
+            width: 100%;
+            padding: 1px;
+        }
+        td{
+            text-align: left;
+        }
+        th{
+            text-align:center;
+            border: 5px solid white;
+        }
+        .wufoo {
+            font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <table class="wufoo">
+        <tr bgcolor="#00ffff">
+            <!--Phần 1: Hãy tạo một form với các trường như sau-->
+            <table bgcolor="white">
+                <th>
+                    <table>
+                        <tr>
+                            <td colspan="4" bgcolor="#ff4500" style="text-align: center;"><h2>SỞ THÍCH CỦA BẠN</h2></td>
+                        </tr>
+                        <tr>
+                            <td>Họ và tên: </td>
+                            <td colspan="3">
+                                <input type="text" name="yourname"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email: </td>
+                            <td colspan="3">
+                                <input type="text" name="email"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4" align="">Sở thích</td>
+                            <td>
+                                <input type="checkbox" name="hobbdy">Thể thao
+                                <input type="checkbox" name="hobbdy">Âm nhạc
+                                <input type="checkbox" name="hobbdy">Đọc sách
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="hobbdy">Lướt web
+                                <input type="checkbox" name="hobbdy">Chơi game
+                                <input type="checkbox" name="hobbdy">Điện ảnh
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="hobbdy">Du lịch
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Gửi thông tin"/>
+                                <input type="reset" value="Nhập lại"/>
+                            </td>
+                        </tr>
+                    </table>
+                </th>
+            </table>
+        </tr>
+        <tr></tr>
+        <tr bgcolor="#ffd700">
+            <!--Phần 2: Tạo một form đăng ký học viên với cấu trúc như sau-->
+            <table bgcolor="#ffd700">
+                <tr>
+                    <td colspan="2" bgcolor="#7fffd4"><h2>ĐĂNG KÝ HỌC VIÊN</h2></td>
+                </tr>
+                <tr>
+                    <td>Họ và tên: </td>
+                    <td>
+                        <input type="text" name="yourname"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh: </td>
+                    <td>
+                        <input type="text" name="date"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Giới tính: </td>
+                    <td>
+                        <input type="checkbox" name="check"/> Nam
+                        <input type="checkbox" name="check"/> Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Đại chỉ: </td>
+                    <td>
+                        <textarea  name="diachi" rows="3" cols="40"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lớp: </td>
+                    <td>
+                        <select>
+                            <option>-Chọn lớp-</option>
+                            <option>1A</option>
+                            <option>1B</option>
+                            <option>1C</option>
+                            <option>2A</option>
+                            <option>2B</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td>
+                        <input type="text" name="mail"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Điện thoại: </td>
+                    <td>
+                        <input type="text" name="phone"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="sub1" value="Đăng ký"/>
+                        <input type="submit" name="sub2" value="Nhập lại"/>
+                    </td>
+                </tr>
+            </table>
+        </tr>
+
+    </table>
+
+</body>
+</html>

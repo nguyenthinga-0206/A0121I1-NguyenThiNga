@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: blue">NHẬP VÀ HIỂN THỊ ĐIỂM</h1>
+    <form method="get" action="" style="text-align: center">
+        <b>Vật lý: </b>
+        <input type="text" id="vatly" value="">
+        <b>Hóa sinh: </b>
+        <input type="text" id="hoahoc" value="">
+        <b>Sinh học: </b>
+        <input type="text" id="sinhhoc" value=""><br><br>
+        <input type="submit" name="sub" value="Kết quả" onclick="DiemTB()"></input><br><br>
+        <b>Trung bình: </b>
+        <input type="text" id="tb" value="">
+    </form>
+
+    <h1 style="text-align: center; color: brown">CHUYỂN ĐỔI NHIỆT ĐỘ</h1>
+    <form method="get" action="" style="text-align: center">
+        <b>Độ C: </b>
+        <input type="text" id="doC" value="" ><br><br>
+        <input type="submit" name="submic" value="Chuyển dổi" onclick="Chuyendoi()"></input><br><br>
+        <b>Độ F: </b>
+        <p id ='kq'></p>
+        <input type="text" id="doF" value="" ><br><br>
+    </form>
+
+    <h1 style="text-align: center; color: darkgoldenrod">CHU VI - DIỆN TÍCH HÌNH TRÒN</h1>
+    <form method="get" action="" style="text-align: center">
+        <b>Bán kính: </b>
+        <input type="text" id="r" value=""><br><br>
+        <input type="submit" name="submic" value="Kết quả" onclick="Tinh()"></input><br><br>
+        <b>Diện tích: </b>
+        <input type="text" id="c" value=""><br><br>
+        <b>Chu vi: </b>
+        <input type="text" id="s" value="">
+    </form>
+    <script>
+        function DiemTB() {
+            var vatly = document.getElementById("vatly");
+            var hoahoc = document.getElementById("hoahoc");
+            var sinhhoc = document.getElementById("sinhhoc");
+            var tb = document.getElementById("tb");
+            var diemtb = (parseFloat(vatly.value) + parseFloat(hoahoc.value) + parseFloat(sinhhoc.value)) / 3;
+            tb.value = diemtb;
+        }
+        function Chuyendoi(){
+            var doC = document.getElementById("doC");
+            var doF = document.getElementById("doF");
+
+            var cf = (parseFloat(doC.value)) * 9 / 5 + 32;
+            doF.value = cf;
+        }
+        function Tinh(){
+            var r = document.getElementById("c");
+            var c = document.getElementById("c");
+            var s = document.getElementById("s");
+            var pi = 3.14;
+
+            var dientich = pi * parseFloat(r.value) * parseFloat(r.value);
+            s.value = dientich;
+
+            var chuvi = 2 * pi * parseFloat(r.value);
+            c.value = chuvi;
+        }
+    </script>
+</body>
+</html>
