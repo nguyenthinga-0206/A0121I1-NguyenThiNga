@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+    <style>
+        tr{
+          text-align: center;
+        }
+        td{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">CHUYỂN ĐỔI TIỀN TỆ</h1>
+    <table align="center">
+        <tr style="font-weight: bold;">
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="sotien" /></td>
+            <td>
+                <select id="dv1">
+                    <option>VietNam</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="dv2">
+                    <option>USD</option>
+                    <option>VietNam</option>
+                </select>
+            </td>
+            <td><input type="submit" id="sub" value="Convert" onclick="chuyenDoi()"/></td>
+        </tr>
+        <tr>
+            <p id="kq" align="center" style="color: blue"></p>
+        </tr>
+    </table>
+    <script>
+        let sotien = document.getElementById("sotien");
+        let dv1 = document.getElementById("dv1");
+        let dv2 = document.getElementById("dv2");
+        let kq = 0;
+
+        function chuyenDoi() {
+            if (dv1.value == "VietNam"){
+                if (dv2.value == "USD"){
+                    kq = parseFloat(sotien.value) / 23000 + "USD";
+                }
+                else{
+                    kq = parseFloat(sotien.value) + "VND";
+                }
+            }
+            else{
+                if (dv2.value == "VietNam"){
+                    kq = parseFloat(sotien.value) * 23000 + "VND";
+                }
+                else {
+                    kq = parseFloat(sotien.value) + "USD";
+                }
+            }
+            document.getElementById("kq").innerText = kq;
+        }
+    </script>
+</body>
+</html>

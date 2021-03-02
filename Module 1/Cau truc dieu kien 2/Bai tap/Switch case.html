@@ -7,23 +7,27 @@
 <body>
     <input type="text" id="day" />
     <input type="submit" onclick="tinhToan()" value="Tinh so ngay">
+    <p id="kq"></p>
 
     <script>
         function tinhToan() {
             let day = parseInt(document.getElementById("day").value);
+            let str = "";
             switch (day) {
                 case 1:case 3:case 5:case 7: case 8: case 10: case 12:
-                    document.write("Thang" + day + "co 31 ngay.");
+                    str = "Thang " + day + " co 31 ngay.";
                     break;
                 case 4:case 6:case 9:case 11:
-                    document.write("Thang" + day + "co 30 ngay.");
+                    str = "Thang " + day + " co 30 ngay.";
                     break;
                 case 2:
-                    document.write("Thang" + day + "co 29 ngay.");
+                    str = "Thang " + day + " co 29 ngay.";
                     break;
                 default:
-                    document.write("Khong co thang nay.");
+                    str = "Khong co thang nay.";
             }
+            document.getElementById("kq").innerHTML = str;
+            document.getElementById("day").value = "";
         }
     </script>
 </body>
