@@ -39,12 +39,12 @@
         <input type="text" id="s" value="">
     </form>
     <script>
+        let vatly = document.getElementById("vatly");
+        let hoahoc = document.getElementById("hoahoc");
+        let sinhhoc = document.getElementById("sinhhoc");
+        let tb = document.getElementById("tb");
         function DiemTB() {
-            var vatly = document.getElementById("vatly");
-            var hoahoc = document.getElementById("hoahoc");
-            var sinhhoc = document.getElementById("sinhhoc");
-            var tb = document.getElementById("tb");
-            var diemtb = (parseFloat(vatly.value) + parseFloat(hoahoc.value) + parseFloat(sinhhoc.value)) / 3;
+            let diemtb = (parseFloat(vatly.value) + parseFloat(hoahoc.value) + parseFloat(sinhhoc.value)) / 3;
             tb.value = diemtb;
         }
         function Chuyendoi(){

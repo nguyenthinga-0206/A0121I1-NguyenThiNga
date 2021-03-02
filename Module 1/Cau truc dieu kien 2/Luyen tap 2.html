@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2</title>
+</head>
+<body>
+    <script>
+        let bai = prompt("Nhap ten bai (1->9):");
+        let id;
+        switch (bai) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+            case '7':
+                bai7();
+                break;
+            case '8':
+                bai8();
+                break;
+            case '9':
+                bai9();
+                break;
+            default:
+                alert("khong co bai nay");
+                let bai = prompt("Nhap ten bai (1->9):");
+        }
+        function bai1(){
+            let doC = parseFloat(prompt("Nhap do C:"));
+            let doF = (doC*9/5)+32;
+            alert(doF);
+        }
+        function bai2() {
+            let met = parseFloat(prompt("Nhap so met can doi:"));
+            let feet = met*3.2808;
+            alert(feet);
+        }
+        function bai3() {
+            let a = parseFloat(prompt("Nhap do dai canh hinh vuong:"));
+            let s = 4*a;
+            alert(s);
+        }
+        function bai4() {
+            let a = parseFloat(prompt("Chieu rong:"));
+            let b = parseFloat(prompt("Chieu dai:"));
+            let s = a*b;
+            alert(s);
+        }
+        function bai5() {
+            let a = parseFloat(prompt("Canh a:"));
+            let b = parseFloat(prompt("Canh b:"));
+            let s = a*b/2;
+            alert(s);
+        }
+        function bai6() {
+            let a = parseFloat(prompt("Nhap a:"));
+            let b = parseFloat(prompt("Nhap b:"));
+            let x;
+            if (a == 0){
+                if (b == 0){
+                    x = "Phuong trinh co vo so nghiem"
+                }
+                else {
+                    x = "Phuong trinh vo nghiem"
+                }
+            }
+            else{
+                x = -b/a;
+            }
+            alert(x);
+        }
+        function bai7() {
+            let a = parseFloat(prompt("Nhap a:"));
+            let b = parseFloat(prompt("Nhap b:"));
+            let c = parseFloat(prompt("Nhap c:"));
+            let deta;
+            let x1,x2;
+            if (a == 0){
+                if (b == 0){
+                    if (c == 0){
+                        x1 = "Phuong trinh co vo so nghiem"
+                    }
+                    else {
+                        x1 = "Phuong trinh vo nghiem"
+                    }
+                    alert(x1);
+                }
+                else{
+                    x1 = -c/b;
+                }
+                alert("Phuong trinh co nghiem x = " + x1);
+            }
+            else {
+                deta = b*b - 4*a*c;
+                if(deta > 0){
+                    x1 = (-b + Math.sqrt(deta))/2*a;
+                    x2 = (-b - Math.sqrt(deta))/2*a;
+                    alert("Phuong trinh co 2 nghiem x1 = " + x1 + " va x2 = " + x2);
+                }
+                if (deta == 0){
+                    x1 = -b/2*a;
+                    alert("Phuong trinh co nghiem kep x1 = x2 = " + x1);
+                }
+                else{
+                    x1 = "Phuong trinh vo nghiem"
+                }
+            }
+        }
+        function bai8(){
+            let tuoi = parseInt(prompt("Nhap vao mot so nguyen bat ki:"));
+            if(tuoi > 0 && tuoi <120){
+                alert(tuoi + " Khong phai la tuoi cua mot nguoi");
+            }
+        }
+        function bai9() {
+            let a = parseFloat(prompt("Nhap a:"));
+            let b = parseFloat(prompt("Nhap b:"));
+            let c = parseFloat(prompt("Nhap c:"));
+            if (a > 0 && b > 0 && c > 0) {
+                if (a + b > c || b + c > a || c + a > b){
+                    alert(a + ", " + b + ", " + c + " la 3 canh cua mot tam giac." );
+                }
+            }
+            else {
+                alert(a + ", " + b + ", " + c + " khong phai la 3 canh cua mot tam giac." );
+            }
+        }
+    </script>
+</body>
+</html>

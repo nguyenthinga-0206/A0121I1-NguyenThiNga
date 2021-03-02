@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 1</title>
+</head>
+<body>
+    <p id="bai1"></p>
+    <p id="bai2"></p>
+    <p id="bai3"></p>
+    <p id="bai4"></p>
+    <p id="bai5"></p>
+    <p id="bai6"></p>
+    <p id="bai7"></p>
+    <script>
+        let a = parseFloat(prompt("Nhap a:"));
+        let b = parseFloat(prompt("Nhap b:"));
+        let bai1;
+        if (a%b==0){
+            bai1 = document.getElementById("bai1").innerHTML = a + " chia het cho " + b;
+        }
+        else {
+            bai1 = document.getElementById("bai1").innerHTML = a + " khong chia het cho " + b;
+        }
+
+        //
+
+        let tuoi = parseInt(prompt("Nhap tuoi cua hoc sinh:"));
+        let bai2;
+        if(tuoi > 15){
+            bai2 = document.getElementById("bai2").innerHTML = "Hoc sinh nay du dieu kien vao lop 10."
+        }
+        else{
+            bai2 = document.getElementById("bai2").innerHTML = "Hoc sinh nay khong du dieu kien vao lop 10."
+        }
+
+        //
+
+        let c = parseInt(prompt("Nhap vao so nguyen bat ki:"));
+        let bai3;
+        if(c > 0){
+            bai3 = document.getElementById("bai3").innerHTML = c + " lon hon 0.";
+        }
+        else{
+            bai3 = document.getElementById("bai3").innerHTML = c + " nho hon 0.";
+        }
+
+        //
+
+        let so1 = parseInt(prompt("So thu nhat:"));
+        let so2 = parseInt(prompt("So thu hai:"));
+        let so3 = parseInt(prompt("So thu ba:"));
+        let bai4;
+        if(so1 > so2 && so1 > so3){
+            bai4 = document.getElementById("bai4").innerHTML = so1 + " la so lon nhat."
+        }
+        else if(so2 > so1 && so2 > so3){
+            bai4 = document.getElementById("bai4").innerHTML = so2 + " la so lon nhat."
+        }
+        else{
+            bai4 = document.getElementById("bai4").innerHTML = so3 + " la so lon nhat."
+        }
+
+        //
+
+        let dktr = parseFloat(prompt("Nhap diem kiem tra:"));
+        let dgk = parseFloat(prompt("Nhap diem giua ki:"));
+        let dck = parseFloat(prompt("Nhap diem cuoi ki:"));
+        let bai5;
+        let dtb = 0.2*dktr + 0.2*dgk + 0.6*dck;
+        if(dtb > 8.0){
+            bai5 = document.getElementById("bai5").innerHTML = "Xep loai A."
+        }
+        else if (dtb > 7){
+            bai5 = document.getElementById("bai5").innerHTML = "Xep loai B."
+        }
+        else if (dtb > 5.5){
+            bai5 = document.getElementById("bai5").innerHTML = "Xep loai C."
+        }
+        else if (dtb > 4){
+            bai5 = document.getElementById("bai5").innerHTML = "Xep loai D."
+        }
+        else{
+            bai5 = document.getElementById("bai5").innerHTML = "Xep loai F."
+        }
+
+        //
+
+        let doanhthu = parseInt(prompt("Nhap so luong ban duoc:"));
+        let tiensp = parseFloat(prompt("Nhap so tien cua 1 san pham:"));
+        let hoahong;
+        let phantram;
+        let bai6;
+        if (doanhthu > 1000){
+            phantram = 0.2;
+        }
+        else if (doanhthu > 500){
+            phantram = 0.15;
+        }
+        else if (doanhthu > 100){
+            phantram = 0.1;
+        }
+        else {
+            phantram = 0.05;
+        }
+        hoahong = phantram*doanhthu*tiensp;
+        bai6 = document.getElementById("bai6").innerHTML = "Hoa hong thu duoc la: " + hoahong + "VND";
+
+    //
+
+
+    </script>
+</body>
+</html>
