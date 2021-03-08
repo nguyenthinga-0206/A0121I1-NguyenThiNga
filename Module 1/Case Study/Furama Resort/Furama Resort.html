@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Furama Resort</title>
+    <style>
+        th{
+            text-align: left;
+        }
+        td{
+            text-align: left;
+            color: #d61b06;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Ho ten khach hang: </th>
+            <th><p id="name" /></th>
+        </tr>
+        <tr>
+            <th>So CMND: </th>
+            <th><p id="cMND" /></th>
+        </tr>
+        <tr>
+            <th>Ngay thang nam: </th>
+            <th><p id="day" /></th>
+        </tr>
+        <tr>
+            <th>Email: </th>
+            <th><p id="email"/></th>
+        </tr>
+        <tr>
+            <th>Dia chi: </th>
+            <th><p id="address" /></th>
+        </tr>
+        <tr>
+            <th>Loai khach hang: </th>
+            <th><p id="customer"/></th>
+        </tr>
+        <tr>
+            <th>Giam gia</th>
+            <th><p id="sale" /></th>
+        </tr>
+        <tr>
+            <th>So luong di kem: </th>
+            <th><p id="number"/></th>
+        </tr>
+        <tr>
+            <th>So ngay thue: </th>
+            <th><p id="rentDays"/></th>
+        </tr>
+        <tr>
+            <th>Loai dich vu: </th>
+            <th><p id="dichVu"/></th>
+        </tr>
+        <tr>
+            <th>Loai phong thue: </th>
+            <th><p id="phongThue"/></th>
+        </tr>
+        <tr>
+            <td>Tong gia sau khi da giam la: </td>
+            <th><p id="money"/></th>
+        </tr>
+            </table>
+    <script>
+        let name = prompt("Nhap ten:");
+        let cMND = prompt("Nhap so CMND:");
+        let day = prompt("Nhap ngay thang nam:");
+        let email = prompt("Nhap Email:");
+        let address = prompt("Nhap dia chu:");
+        let customer = prompt("Loai khach (Diamond, Platinum, Gold, Silver, Member):");
+        let sale = parseInt(prompt("Giam gia (0->99):"));
+        let number = parseInt(prompt("So luong di kem:"));
+        let rentDays = parseInt(prompt("So ngay thue:"));
+        let dichVu = prompt("Loai dich vu (Villa (500$), House (300$), Room (100$)):");
+        let phongThue = prompt("Loai phong thue (Vip, Business, Normal):");
+        let money;
+        var giaDichVu;
+
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("cMND").innerHTML = cMND;
+        document.getElementById("day").innerHTML = day;
+        document.getElementById("email").innerHTML = email;
+        document.getElementById("address").innerHTML = address;
+        document.getElementById("customer").innerHTML = customer;
+        document.getElementById("sale").innerHTML = sale+"%";
+        document.getElementById("number").innerHTML = number;
+        document.getElementById("rentDays").innerHTML = rentDays;
+        document.getElementById("dichVu").innerHTML = dichVu;
+        document.getElementById("phongThue").innerHTML = phongThue;
+        dichVu.toLocaleLowerCase();
+        switch (dichVu) {
+            case 'villa':
+                giaDichVu = 500;
+                break
+            case 'business':
+                giaDichVu = 300;
+                break;
+            case 'normal':
+                giaDichVu = 100;
+                break;
+            default:
+        }
+        money = giaDichVu*rentDays*(1-sale/100);
+        document.getElementById("money").innerHTML = money+"$";
+
+    </script>
+</body>
+</html>
