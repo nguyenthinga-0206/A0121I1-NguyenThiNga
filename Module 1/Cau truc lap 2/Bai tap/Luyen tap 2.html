@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2</title>
+</head>
+<body>
+    <script>
+        var bai = parseInt(prompt("Nhap so tu 1 -> 6"));
+        switch (bai) {
+            case 1:
+                var n = parseInt(prompt("Nhap so dong toi da co the in:"));
+                bai1(n);
+                break;
+            case 2:
+                var n = parseInt(prompt("Nhap vao so nguyen duong:"));
+                bai2(n);
+                break;
+            case 3:
+                var a = parseInt(prompt("Nhap a:"));
+                bai3(a);
+                break;
+            case 4:
+                var a = parseInt(prompt("Nhap chieu dai:"));
+                var b = parseInt(prompt("Nhap chieu rong:"));
+                bai4(a,b);
+                break;
+            case 5:
+                bai5();
+                break;
+            case 6:
+                bai6();
+                break;
+            default:
+                document.write("khong co bai nay");
+        }
+
+        function bai1(n) {
+            var a = 1;
+            var b = 2;
+            var c;
+            document.write("Dãy Finonaci  ");
+            for (var i=0;i<n;i++){
+                document.write(a+"   ");
+                c = a+b;
+                a = b;
+                b = c;
+            }
+        }
+        function bai2(n) {
+            var tich=1;
+            for (var i=2;i<=n;i++){
+                tich*=i;
+            }
+            document.write(n+"! = "+tich);
+        }
+        function bai3(a) {
+            var i,j;
+            for (i=0;i<a;i++){
+                for (j=0;j<=i;j++){
+                    document.write("*  ");
+                }
+                document.write("<br>");
+            }
+            document.write("<br>");
+            for (i=a;i>0;i--){
+                for (j=i;j>0;j--){
+                    document.write("*  ");
+                }
+                document.write("<br>");
+            }
+            document.write("<br>");
+            for (i=0;i<a;i++){
+                for (j=0;j<a;j++){
+                    if (j<a-i-1){
+                        document.write("-  ");
+                    }
+                    else{
+                        document.write("*  ");
+                    }
+                }
+                document.write("<br>");
+            }
+
+        }
+        function  bai4(a,b) {
+            var i,j;
+            for (i=0;i<a;i++){
+                for (j=0;j<b;j++){
+                    if (i===0 || i ===(a-1)){
+                        document.write("*  ");
+                    }
+                    else {
+                        if (j===0 || j === (b-1)){
+                            document.write("*  ");
+                        }
+                        else {
+                            document.write("   ");
+                        }
+                    }
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 1</title>
+</head>
+<body>
+    <script>
+        var bai = parseInt(prompt("Nhap so tu 1 -> 8"));
+        switch (bai) {
+            case 1:
+                bai1();
+                break;
+            case 2:
+                bai2();
+                break;
+            case 3:
+                document.write("20 số trong dãy fibonacci đầu tiên la: <br>");
+                bai3();
+                break;
+            case 4:
+                document.write("Số chia het cho 5 trong dãy fibonacci đầu tiên la: <br>");
+                bai4();
+                break;
+            case 5:
+                document.write("Tổng 20 số trong dãy fibonacci đầu tiên la: <br>");
+                bai5();
+                break;
+            case 6:
+                document.write("Tổng 30 số chia het cho 7 đầu tiên la: <br>");
+                bai6();
+                break;
+            case 7:
+                bai7();
+                break;
+            case 8:
+                var t = "<form>";
+                t += "<input type='button' id='id' value='Chơi' onclick='bai8();'/>";
+                t += "</form>";
+                document.write(t);
+                break;
+            default:
+                document.write("khong co bai nay");
+        }
+
+        function bai1() {
+            for (var i = 0; i < 100; i++){
+                if (i === 99){
+                    document.write("Da hoan thanh");
+                }
+            }
+        }
+        function bai2() {
+            var nhietdo = parseInt(prompt("Nhap nhiet do:"));
+            if (nhietdo>100){
+                document.write("Hay giam nhiet do");
+            }
+            if(nhietdo<20){
+                document.write("hay tang nhiet do");
+            }
+        }
+        function bai3() {
+            var count = 0;
+            var a = 1;
+            var b = 2;
+            var c;
+            while (count<20){
+                document.write(a+"   ");
+                c = a + b;
+                a = b;
+                b = c;
+                count++;
+            }
+        }
+        function bai4() {
+            var a = 1;
+            var b = 2;
+            var c;
+            while (a%5!==0){
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            document.write(a);
+        }
+        function bai5() {
+            var count = 0;
+            var sum = 0;
+            var a = 1;
+            var b = 2;
+            var c;
+            while (count<20){
+                c = a + b;
+                a = b;
+                b = c;
+                sum += a;
+                count++;
+            }
+            document.write(sum);
+        }
+        function bai6() {
+            var count = 0;
+            var sum = 0;
+            var a = 7;
+            while (count<30){
+                sum += a;
+                a+=7;
+                count++;
+            }
+            document.write(sum);
+
+        }
+        function bai7() {
+            var str = "";
+            for (var i =1;i<=100;i++){
+                if (i%3===0 && i%5===0){
+                    str = "FizzBuzz";
+                }
+                else{
+                    if (i%3===0){
+                        str = "Fizz";
+                    }
+                    else if (i%5===0){
+                        str = "Buzz";
+                    }
+                    else{
+                        str = i;
+                    }
+                }
+                document.write(str+"<br>");
+            }
+        }
+        function bai8() {
+            var count = 0;
+            var a = parseInt(prompt("Nhap so bat dau:"));
+            var b = parseInt(prompt("Nhap so ket thuc:"));
+            var soRandomm = Math.floor(Math.random() * (b - a + 1)) + a;
+            var c = parseInt(prompt("Nhap so ban chon:"));
+            while (count < 3){
+                if (soRandomm===c){
+                    alert("Chuc mung ban da chien thang!!!");
+                    break;
+                }
+                else {
+                    if (a < c){
+                        alert("So ban nhap lon hon roi!");
+                    }
+                    else {
+                        alert("So ban nhap nho hon roi!");
+                    }
+                    count++;
+                }
+                var c = parseInt(prompt("Moi ban chon lai:"));
+            }
+        }
+    </script>
+</body>
+</html>
