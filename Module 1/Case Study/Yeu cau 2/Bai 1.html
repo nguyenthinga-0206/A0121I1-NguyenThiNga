@@ -5,6 +5,22 @@
     <title>Tinh thue luong</title>
 </head>
 <body>
-
+    <script>
+        var luong = parseInt(prompt("Nhap luong:"));
+        var thueThuNhap;
+        var luongRong;
+        if (luong===15000000){
+            thueThuNhap = 0.2*luong;
+        }
+        if (luong >= 7000000 && luong < 15000000){
+            thueThuNhap = 0.1*luong;
+        }
+        if (luong < 7000000){
+            thueThuNhap = 0.05*luong;
+        }
+        luongRong = luong-thueThuNhap;
+        alert("Thue thu nhap = "+thueThuNhap);
+        alert("Luong rong = "+luongRong)
+    </script>
 </body>
 </html>
