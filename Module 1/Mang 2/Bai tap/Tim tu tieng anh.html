@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tra tu diem</title>
+</head>
+<body>
+    <h2>Tra tu dien tieng anh</h2>
+    <input type="text" id="English"/>
+    <input type="button" onclick="check()" value="Check" />
+    <p id="vietnamse"/>
+    <script>
+    function check() {
+        var anh = ["name", "age", "address", "table", "email"];
+        var viet = ["tên", "tuổi", "địa chỉ", "bảng", "email"];
+        var English = document.getElementById("English");
+        for(var i=0;i<anh.length;i++){
+            if ((English.value).includes(anh[i])){
+                document.getElementById("vietnamse").innerHTML = viet[i];
+            }
+            else {
+                document.getElementById("vietnamse").innerHTML = "Khong tim thay!";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
