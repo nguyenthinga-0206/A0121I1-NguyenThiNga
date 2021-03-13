@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Nhap so bat ki:"));
+        alert("Binh phuong cua "+a+" la "+squared(a));
+        var pi = 3.14;
+        var r = parseInt(prompt("Nhap vao ban kinh duong tron:"));
+        circleArea(r);
+        diameterOfCircle(r);
+        var n = parseInt(prompt("Nhap vao so nguyen bat ki:"));
+        alert("Gia thua cua "+n+" bang "+factorial(n));
+        var str = prompt("Nhap vao 1 ki tu bat ki");
+        check(str);
+        var x = parseInt(prompt("Nhap so nguyen thu nhat:"));
+        var y = parseInt(prompt("Nhap so nguyen thu hai:"));
+        var z = parseInt(prompt("Nhap so nguyen thu ba:"));
+        findMin(x,y,z);
+        var m = parseInt(prompt("Nhap mot so bat ki:"));
+        checkPositiveIntegers(m);
+        var number1 = parseInt(prompt("Nhap so thu nhat:"));
+        var number2 = parseInt(prompt("Nhap so thu hai:"));
+        swapTwoNumber(number1,number2);
+        var number = parseInt(prompt("Nhap so luong phan tu cua mang:"));
+        var arr3 = reverseArray(number);
+        var str1 = prompt("Nhap vao chuoi ki tu:");
+        var str2 = prompt("Nhap vao 1 ki tu bat ki:");
+        countChar(str1,str2);
+
+        function squared(a) {
+            return a*a;
+        }
+        function circleArea(r) {
+            var s = pi*r*r;
+            alert("Dien tich hinh tron ban kinh "+r+" la "+s);
+        }
+        function diameterOfCircle(r) {
+            var c = 2*pi*r;
+            alert("Dien tich hinh tron ban kinh "+r+" la "+c);
+        }
+        function factorial(n) {
+            if (n<0){
+                return;
+            }
+            if (n===0){
+                return 1;
+            }
+            else {
+                return n*factorial(n-1);
+            }
+        }
+        function check(str) {
+            if (str >= '0' && str <= '9'){
+                alert("true");
+            }
+            else {
+                alert("false");
+            }
+        }
+        function findMin(x,y,z) {
+            var min;
+            if (x <= y && x <= z){
+                min = x;
+            }
+            else if (y <= z){
+                min = y;
+            }
+            else {
+                min = z;
+            }
+            alert("Gia tri min trong 3 so "+x+", "+y+", "+z+" la "+min);
+        }
+        function checkPositiveIntegers(m) {
+            if (m > 0){
+                alert("true");
+            }
+            else {
+                alert("false");
+            }
+        }
+        function swapTwoNumber(a,b) {
+            var tmp = a;
+            a = b;
+            b = tmp;
+            alert("a = "+a+"\nb = "+b);
+        }
+        function reverseArray(n) {
+            var array = [];
+            for (var i=0;i<n;i++){
+                array[i] = prompt("Nhap vao gia tri thu "
+                    + i + " cua mang: ");
+            }
+            alert(array+"\nSau khu dao nguoc se la:\n"+array.reverse());
+        }
+        function countChar(str1,str2) {
+            var count = 0;
+            for (var i=0;i<str1.length;i++){
+                if (str2===str1[i]){
+                    count++;
+                }
+            }
+            if (count>0){
+                alert("Trong chuoi "+str1+" ki tu "+str2+" xuat hien "+count+" lan");
+            }
+            else {
+                alert("-1");
+            }
+        }
+    </script>
+</body>
+</html>

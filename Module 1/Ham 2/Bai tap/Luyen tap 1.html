@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 1</title>
+</head>
+<body>
+    <script>
+        alertMessage();
+        var number = parseInt(prompt("Nhap mot so bat ki:"));
+        addOne(number);
+        var a = parseInt(prompt("Nhap a:"));
+        var b = parseInt(prompt("Nhap b:"));
+        compareTwoNumbers(a,b);
+        result = 0;
+        alert("Gia tri cua result truoc khi goi ham la "+result);
+        result = addNumbers();
+        alert("Gia tri cua result sau khi goi ham la "+result);
+        var arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        var arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        var star = (prompt("Nhap ten ngoi sao ban tim kiem:")).toLocaleLowerCase();
+        searchStar(star);
+
+        function  alertMessage() {
+            alert("Xin chào");
+        }
+        function addOne(a) {
+            a++;
+            alert("Gia tri cua bien sau khi tang 1 la "+a++);
+        }
+        function compareTwoNumbers(a,b) {
+            if (a>b){
+                alert(a+" lon hon "+b);
+            }
+            else {
+                alert("Tong 2 so bang "+ (a+b));
+            }
+        }
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }
+        function searchStar(star) {
+            var count = 0;
+            for (var i=0;i<arr1.length;i++){
+                if (star===(arr1[i]).toLocaleLowerCase()){
+                    count++;
+                    alert(star+" thuoc chom sao "+ arr2[i]);
+                }
+            }
+            if (count===0){
+                alert(star+" khong thuoc chom sao nao");
+            }
+        }
+
+    </script>
+</body>
+</html>

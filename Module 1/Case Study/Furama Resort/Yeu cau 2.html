@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeu cau 2</title>
+</head>
+<body>
+        <script>
+            let name = "Nguyễn Thị Nga";
+            let cMND = "0987654321";
+            let day = "22/12/";
+            let email = "nga1234@gmail.com";
+            let address = "Đà Nẵng";
+            let customer = "Platinum";
+            let sale = "20";
+            let number = "2";
+            let rentDays = "3";
+            let dichVu = "Villa";
+            let phongThue = "Vip";
+            var saleAddress;
+            var saleRentDay;
+            var saleCustomer;
+
+            let menu= parseInt(prompt("1. Show Information Customer."+"\n"
+                +"2. Edit Information Customer."+"\n"
+                +"3. Show the amount to be paid after discount"));
+            switch (menu) {
+                case 1:
+                    alert("Ten khach hang: "+name
+                        +"\nSo CMND: "+cMND
+                        +"\nNgay sinh: "+day
+                        +"\nEmail: "+email
+                        +"\nDia chi: "+address
+                        +"\nLoai khach hang: "+customer
+                        +"\nGiam gia: "+sale
+                        +"\nSo luong di kem: "+number
+                        +"\nSo ngay thue: "+rentDays
+                        +"\nLoai dich vu: "+dichVu
+                        +"\nLoai phong: "+phongThue);
+                    break;
+                case 2:
+                    let key= parseInt(prompt("1. Ten khach hang."
+                        +"\n2. So CMND."
+                        +"\n3. Ngay sinh."
+                        +"\n4. Email."
+                        +"\n5. Dia chi."
+                        +"\n6. Loai khach hang."
+                        +"\n7. Giam gia."
+                        +"\n8. So luong di kem."
+                        +"\n9. So ngay thue."
+                        +"\n10. Loai dich vu."
+                        +"\n11. Loai phong"));
+                        switch(key){
+                            case 1:
+                                name = prompt("Ten khach hang:");
+                                break;
+                            case 2:
+                                cMND = prompt("So CMND:");
+                                break;
+                            case 3:
+                                day = prompt("Ngay sinh:");
+                                break;
+                            case 4:
+                                email = prompt("Email:");
+                                break;
+                            case 5:
+                                address = prompt("Dia chi:");
+                                break;
+                            case 6:
+                                customer = prompt("Loai khach hang:");
+                                break;
+                            case 7:
+                                sale = parseInt(prompt("Giam gia:"));
+                                break;
+                            case 8:
+                                number = parseInt(prompt("So nguoi di kem:"));
+                                break;
+                            case 9:
+                                rentDays = parseInt(prompt("So ngay thue:"));
+                                break;
+                            case 10:
+                                dichVu = prompt("Loai dich vu:");
+                                break;
+                            case 11:
+                                phongThue = prompt("Loai phong thue:");
+                                break;
+                            default:
+                                alert("Failed");
+                        }
+                    alert("Ten khach hang: "+name
+                        +"\nSo CMND: "+cMND
+                        +"\nNgay sinh: "+day
+                        +"\nEmail: "+email
+                        +"\nDia chi: "+address
+                        +"\nLoai khach hang: "+customer
+                        +"\nGiam gia: "+sale
+                        +"\nSo luong di kem: "+number
+                        +"\nSo ngay thue: "+rentDays
+                        +"\nLoai dich vu: "+dichVu
+                        +"\nLoai phong: "+phongThue);
+                    break;
+                case 3:
+                    address.toLocaleLowerCase();
+                    customer.toLocaleLowerCase();
+                    if(address==='da nang' && (rentDays>5 &&)){
+                        saleAddress = 20;
+                    }
+                    else if (address==='hue'){
+                        saleAddress = 10;
+                    }
+                    else if(address==='quang nam'){
+                        saleAddress = 5;
+                    }
+                    break;
+                default:
+                    let menu= parseInt(prompt("1. Show Information Customer."+"\n"
+                        +"2. Edit Information Customer."+"\n"
+                        +"3. Show the amount to be paid after discount"+"\n\n"
+                        +"Bạn hãy chon chức năng có trong trình đơn!"));
+            }
+        </script>
+</body>
+</html>

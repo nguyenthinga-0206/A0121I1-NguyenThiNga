@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra tu doi xung</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Nhap tu de kiem tra:");
+        if (str.length===1){
+            alert("True");
+        }
+        else {
+            isPalindrome(str);
+        }
+        function isPalindrome(s){
+            var count = 0;
+            for (var i=0;i<s.length;i++){
+                if (s[i] !== s[s.length-1-i]){
+                    count++;
+                }
+            }
+            if (count>0){
+                alert("Flase");
+            }
+            else {
+                alert("True");
+            }
+        }
+    </script>
+</body>
+</html>
